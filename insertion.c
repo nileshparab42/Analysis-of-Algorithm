@@ -6,6 +6,7 @@ int main()
     float wswap,pswap;
     printf("Insert array size :\n");
     scanf("%d",&n);
+    printf("Insert elements :\n");
     for(i=0;i<n;i++)
     {
         scanf("\n%d",&a[i]);
@@ -22,14 +23,16 @@ int main()
         }
         a[i+1]=temp;
     }
+    printf("\nAfter Sorting :");
     for(i=0;i<n;i++)
     {
         printf("\n%d",a[i]);
     }
     wswap=(n*(n-1))/2;
     pswap=(swap/wswap)*100;
-    printf("\nTotal swap :%d",swap);
-    printf("\nPercentage of swap :%d",pswap);
+    printf("\n\n--------Analysis of algorithm :--------");
+    printf("\nTotal swap : %d",swap);
+    printf("\nPercentage of swap : %f percent",pswap);
     if(pswap<33)
     {
         printf("\nBest Case");
